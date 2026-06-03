@@ -368,7 +368,7 @@ def plot_per_class_f1_comparison(results: Dict[str, Dict]) -> str:
 
     fig, ax = plt.subplots(figsize=(9, 5))
     for i, name in enumerate(model_names):
-        f1_vals = [results[name]["per_class_f1"].get(c, 0.0) for c in CLASS_NAMES]
+        f1_vals = [(results[name].get("per_class_f1") or {}).get(c, 0.0) for c in CLASS_NAMES]
         offset = (i - len(model_names) / 2 + 0.5) * width
         bars = ax.bar(x + offset, f1_vals, width * 0.9, label=name)
         for bar, val in zip(bars, f1_vals):
