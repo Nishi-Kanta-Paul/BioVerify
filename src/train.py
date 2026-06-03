@@ -377,8 +377,30 @@ def train_tfidf() -> Dict:
 # 3. Training orchestrator
 # ---------------------------------------------------------------------------
 
+def _ensure_processed_splits() -> None:
+    """Generate processed CSV splits from raw JSON if they don't exist yet."""
+    train_path = os.path.join(CONFIG.data.processed_dir, CONFIG.data.train_file)
+    if os.path.exists(train_path):
+        return
+
+    raw_path = os.path.join(CONFIG.data.data_dir, CONFIG.data.raw_data_file)
+    if not os.path.exists(raw_path):
+        raise FileNotFoundError(
+            f"Raw data not found at '{raw_path}'.\n"
+            "Run Section 5 (Dataset Setup) in the Colab notebook first."
+        )
+
+    print("[train] Processed splits not found — generating from raw data...")
+    from src.dataset import load_pubmedqa, reformulate_dataset, split_dataset
+    samples = load_pubmedqa(raw_path)
+    df = reformulate_dataset(samples)
+    split_dataset(df)
+    print("[train] Splits generated and saved.")
+
+
 def train_model(model_name: str, **kwargs) -> Dict:
     """Dispatch to train_transformer or train_tfidf based on model_name."""
+    _ensure_processed_splits()
     if model_name == "tfidf_lr":
         return train_tfidf()
     else:

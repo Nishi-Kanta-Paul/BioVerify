@@ -27,6 +27,9 @@ wandb/
 runs/
 mlruns/
 
+# Datasets
+datasets/
+
 # Environment
 .env
 *.env
