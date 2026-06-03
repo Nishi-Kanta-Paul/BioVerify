@@ -20,7 +20,7 @@ build/
 
 # Jupyter
 .ipynb_checkpoints/
-*.ipynb
+# *.ipynb  ← removed: COLAB_RUNNER.ipynb must be tracked
 
 # Experiment tracking
 wandb/
