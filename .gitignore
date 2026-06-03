@@ -1,0 +1,38 @@
+# Data (download externally — see README)
+data/
+
+# Model checkpoints and large binary artefacts
+experiments/*/checkpoints/
+*.pth
+*.pkl
+
+# Generated outputs
+outputs/
+
+# Python artefacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Experiment tracking
+wandb/
+runs/
+mlruns/
+
+# Environment
+.env
+*.env
+venv/
+.venv/
+
+# OS artefacts
+.DS_Store
+Thumbs.db

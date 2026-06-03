@@ -1,0 +1,30 @@
+# BioVerify dependencies
+# Python 3.9+
+
+# Deep learning
+torch==2.1.2
+torchvision==0.16.2
+transformers==4.38.2
+tokenizers==0.15.2
+datasets==2.18.0
+accelerate==0.28.0
+
+# Traditional ML
+scikit-learn==1.4.1
+imbalanced-learn==0.12.0
+
+# Numerics & data
+numpy==1.26.4
+pandas==2.2.1
+scipy==1.12.0
+
+# Visualisation
+matplotlib==3.8.3
+seaborn==0.13.2
+
+# Utilities
+tqdm==4.66.2
+
+# Explainability (optional)
+lime==0.2.0.1
+shap==0.44.1

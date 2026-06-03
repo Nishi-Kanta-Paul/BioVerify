@@ -1,0 +1,46 @@
+{
+  "model_name": "tfidf_lr",
+  "accuracy": 0.9823321554770318,
+  "macro_f1": 0.9363786741315688,
+  "per_class_precision": {
+    "supported": 0.9637681159420289,
+    "contradicted": 1.0,
+    "uncertain": 1.0
+  },
+  "per_class_recall": {
+    "supported": 1.0,
+    "contradicted": 1.0,
+    "uncertain": 0.7058823529411765
+  },
+  "per_class_f1": {
+    "supported": 0.981549815498155,
+    "contradicted": 1.0,
+    "uncertain": 0.8275862068965517
+  },
+  "contradiction_precision": 1.0,
+  "contradiction_recall": 1.0,
+  "contradiction_f1": 1.0,
+  "per_class_auc": {
+    "supported": 1.0,
+    "contradicted": 1.0,
+    "uncertain": 1.0
+  },
+  "macro_auc": 1.0,
+  "confusion_matrix": [
+    [
+      133,
+      0,
+      0
+    ],
+    [
+      0,
+      133,
+      0
+    ],
+    [
+      5,
+      0,
+      12
+    ]
+  ]
+}

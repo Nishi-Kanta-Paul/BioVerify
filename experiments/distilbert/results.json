@@ -1,0 +1,46 @@
+{
+  "model_name": "distilbert",
+  "accuracy": 0.06007067137809187,
+  "macro_f1": 0.03777777777777778,
+  "per_class_precision": {
+    "supported": 0.0,
+    "contradicted": 0.0,
+    "uncertain": 0.06007067137809187
+  },
+  "per_class_recall": {
+    "supported": 0.0,
+    "contradicted": 0.0,
+    "uncertain": 1.0
+  },
+  "per_class_f1": {
+    "supported": 0.0,
+    "contradicted": 0.0,
+    "uncertain": 0.11333333333333333
+  },
+  "contradiction_precision": 0.0,
+  "contradiction_recall": 0.0,
+  "contradiction_f1": 0.0,
+  "per_class_auc": {
+    "supported": 0.4964160401002506,
+    "contradicted": 0.5282957393483709,
+    "uncertain": 0.5650154798761611
+  },
+  "macro_auc": 0.5299090864415942,
+  "confusion_matrix": [
+    [
+      0,
+      0,
+      133
+    ],
+    [
+      0,
+      0,
+      133
+    ],
+    [
+      0,
+      0,
+      17
+    ]
+  ]
+}
